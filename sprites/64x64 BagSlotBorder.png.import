@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/64x64 BagSlotBorder.png-efeccf6f0913c3f0a9d302d8bbc2a54d.stex"
+
+[deps]
+
+source_file="res://sprites/64x64 BagSlotBorder.png"
+source_md5="99dead3befea2ba3dc3316e58b01221c"
+
+dest_files=[ "res://.import/64x64 BagSlotBorder.png-efeccf6f0913c3f0a9d302d8bbc2a54d.stex" ]
+dest_md5="bfde4d539d46d71a5f60fd8753e46e0c"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

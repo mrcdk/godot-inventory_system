@@ -1,0 +1,476 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://stylebox_flat_black_semitransparent.tres" type="StyleBox" id=1]
+[ext_resource path="res://open_sans_bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://open_sans_italics.tres" type="DynamicFont" id=3]
+[ext_resource path="res://open_sans_normal.tres" type="DynamicFont" id=4]
+[ext_resource path="res://sprites/itsmars_Inventory.png" type="Texture" id=5]
+[ext_resource path="res://Inventory.gd" type="Script" id=6]
+[ext_resource path="res://ItemSlot.tscn" type="PackedScene" id=7]
+[ext_resource path="res://EquipedItemSlot.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ItemStatsPopup.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Theme" id=1]
+
+default_font = ExtResource( 4 )
+Panel/styles/panel = ExtResource( 1 )
+Panel/styles/panelf = null
+Panel/styles/panelnc = null
+RichTextLabel/colors/default_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+RichTextLabel/colors/font_color_selected = Color( 0.490196, 0.490196, 0.490196, 1 )
+RichTextLabel/colors/selection_color = Color( 0.1, 0.1, 1, 0.8 )
+RichTextLabel/constants/line_separation = 1
+RichTextLabel/constants/table_hseparation = 3
+RichTextLabel/constants/table_vseparation = 3
+RichTextLabel/fonts/bold_font = ExtResource( 2 )
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = ExtResource( 3 )
+RichTextLabel/fonts/mono_font = null
+RichTextLabel/fonts/normal_font = ExtResource( 4 )
+RichTextLabel/styles/focus = null
+RichTextLabel/styles/normal = null
+_sections_unfolded = [ "Panel", "Panel/styles", "RichTextLabel/fonts" ]
+
+[node name="Inventory" type="TextureRect" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 554.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 1 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 6 )
+_sections_unfolded = [ "Mouse", "Theme" ]
+
+[node name="ItemsContainer" type="GridContainer" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 27.0
+margin_top = 541.0
+margin_right = 539.0
+margin_bottom = 797.0
+rect_min_size = Vector2( 512, 256 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 8
+_sections_unfolded = [ "Rect", "custom_constants" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ItemSlot" parent="ItemsContainer" index="0" instance=ExtResource( 7 )]
+
+[node name="ItemSlot2" parent="ItemsContainer" index="1" instance=ExtResource( 7 )]
+
+margin_left = 64.0
+margin_right = 128.0
+
+[node name="ItemSlot3" parent="ItemsContainer" index="2" instance=ExtResource( 7 )]
+
+margin_left = 128.0
+margin_right = 192.0
+
+[node name="ItemSlot4" parent="ItemsContainer" index="3" instance=ExtResource( 7 )]
+
+margin_left = 192.0
+margin_right = 256.0
+
+[node name="ItemSlot5" parent="ItemsContainer" index="4" instance=ExtResource( 7 )]
+
+margin_left = 256.0
+margin_right = 320.0
+
+[node name="ItemSlot6" parent="ItemsContainer" index="5" instance=ExtResource( 7 )]
+
+margin_left = 320.0
+margin_right = 384.0
+
+[node name="ItemSlot7" parent="ItemsContainer" index="6" instance=ExtResource( 7 )]
+
+margin_left = 384.0
+margin_right = 448.0
+
+[node name="ItemSlot8" parent="ItemsContainer" index="7" instance=ExtResource( 7 )]
+
+margin_left = 448.0
+margin_right = 512.0
+
+[node name="ItemSlot9" parent="ItemsContainer" index="8" instance=ExtResource( 7 )]
+
+margin_top = 64.0
+margin_bottom = 128.0
+
+[node name="ItemSlot10" parent="ItemsContainer" index="9" instance=ExtResource( 7 )]
+
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 128.0
+margin_bottom = 128.0
+
+[node name="ItemSlot11" parent="ItemsContainer" index="10" instance=ExtResource( 7 )]
+
+margin_left = 128.0
+margin_top = 64.0
+margin_right = 192.0
+margin_bottom = 128.0
+
+[node name="ItemSlot12" parent="ItemsContainer" index="11" instance=ExtResource( 7 )]
+
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 128.0
+
+[node name="ItemSlot13" parent="ItemsContainer" index="12" instance=ExtResource( 7 )]
+
+margin_left = 256.0
+margin_top = 64.0
+margin_right = 320.0
+margin_bottom = 128.0
+
+[node name="ItemSlot14" parent="ItemsContainer" index="13" instance=ExtResource( 7 )]
+
+margin_left = 320.0
+margin_top = 64.0
+margin_right = 384.0
+margin_bottom = 128.0
+
+[node name="ItemSlot15" parent="ItemsContainer" index="14" instance=ExtResource( 7 )]
+
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 448.0
+margin_bottom = 128.0
+
+[node name="ItemSlot16" parent="ItemsContainer" index="15" instance=ExtResource( 7 )]
+
+margin_left = 448.0
+margin_top = 64.0
+margin_right = 512.0
+margin_bottom = 128.0
+
+[node name="ItemSlot17" parent="ItemsContainer" index="16" instance=ExtResource( 7 )]
+
+margin_top = 128.0
+margin_bottom = 192.0
+
+[node name="ItemSlot18" parent="ItemsContainer" index="17" instance=ExtResource( 7 )]
+
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 128.0
+margin_bottom = 192.0
+
+[node name="ItemSlot19" parent="ItemsContainer" index="18" instance=ExtResource( 7 )]
+
+margin_left = 128.0
+margin_top = 128.0
+margin_right = 192.0
+margin_bottom = 192.0
+
+[node name="ItemSlot20" parent="ItemsContainer" index="19" instance=ExtResource( 7 )]
+
+margin_left = 192.0
+margin_top = 128.0
+margin_right = 256.0
+margin_bottom = 192.0
+
+[node name="ItemSlot21" parent="ItemsContainer" index="20" instance=ExtResource( 7 )]
+
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 320.0
+margin_bottom = 192.0
+
+[node name="ItemSlot22" parent="ItemsContainer" index="21" instance=ExtResource( 7 )]
+
+margin_left = 320.0
+margin_top = 128.0
+margin_right = 384.0
+margin_bottom = 192.0
+
+[node name="ItemSlot23" parent="ItemsContainer" index="22" instance=ExtResource( 7 )]
+
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 448.0
+margin_bottom = 192.0
+
+[node name="ItemSlot24" parent="ItemsContainer" index="23" instance=ExtResource( 7 )]
+
+margin_left = 448.0
+margin_top = 128.0
+margin_right = 512.0
+margin_bottom = 192.0
+
+[node name="ItemSlot25" parent="ItemsContainer" index="24" instance=ExtResource( 7 )]
+
+margin_top = 192.0
+margin_bottom = 256.0
+
+[node name="ItemSlot26" parent="ItemsContainer" index="25" instance=ExtResource( 7 )]
+
+margin_left = 64.0
+margin_top = 192.0
+margin_right = 128.0
+margin_bottom = 256.0
+
+[node name="ItemSlot27" parent="ItemsContainer" index="26" instance=ExtResource( 7 )]
+
+margin_left = 128.0
+margin_top = 192.0
+margin_right = 192.0
+margin_bottom = 256.0
+
+[node name="ItemSlot28" parent="ItemsContainer" index="27" instance=ExtResource( 7 )]
+
+margin_left = 192.0
+margin_top = 192.0
+margin_right = 256.0
+margin_bottom = 256.0
+
+[node name="ItemSlot29" parent="ItemsContainer" index="28" instance=ExtResource( 7 )]
+
+margin_left = 256.0
+margin_top = 192.0
+margin_right = 320.0
+margin_bottom = 256.0
+
+[node name="ItemSlot30" parent="ItemsContainer" index="29" instance=ExtResource( 7 )]
+
+margin_left = 320.0
+margin_top = 192.0
+margin_right = 384.0
+margin_bottom = 256.0
+
+[node name="ItemSlot31" parent="ItemsContainer" index="30" instance=ExtResource( 7 )]
+
+margin_left = 384.0
+margin_top = 192.0
+margin_right = 448.0
+margin_bottom = 256.0
+
+[node name="ItemSlot32" parent="ItemsContainer" index="31" instance=ExtResource( 7 )]
+
+margin_left = 448.0
+margin_top = 192.0
+margin_right = 512.0
+margin_bottom = 256.0
+
+[node name="LeftEquipContainer" type="GridContainer" parent="." index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 113.0
+margin_bottom = 479.0
+rect_min_size = Vector2( 81, 447 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/vseparation = 10
+columns = 1
+_sections_unfolded = [ "custom_constants" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EquipedItemSlot" parent="LeftEquipContainer" index="0" instance=ExtResource( 8 )]
+
+margin_right = 81.0
+margin_bottom = 81.0
+itemType = 1
+
+[node name="EquipedItemSlot2" parent="LeftEquipContainer" index="1" instance=ExtResource( 8 )]
+
+margin_top = 91.0
+margin_right = 81.0
+margin_bottom = 172.0
+itemType = 3
+
+[node name="EquipedItemSlot3" parent="LeftEquipContainer" index="2" instance=ExtResource( 8 )]
+
+margin_top = 182.0
+margin_right = 81.0
+margin_bottom = 263.0
+itemType = 4
+
+[node name="EquipedItemSlot4" parent="LeftEquipContainer" index="3" instance=ExtResource( 8 )]
+
+margin_top = 273.0
+margin_right = 81.0
+margin_bottom = 354.0
+itemType = 5
+
+[node name="EquipedItemSlot5" parent="LeftEquipContainer" index="4" instance=ExtResource( 8 )]
+
+margin_top = 364.0
+margin_right = 81.0
+margin_bottom = 445.0
+itemType = 6
+
+[node name="RightEquipContainer" type="GridContainer" parent="." index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 453.0
+margin_top = 32.0
+margin_right = 534.0
+margin_bottom = 479.0
+rect_min_size = Vector2( 81, 447 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/vseparation = 10
+columns = 1
+_sections_unfolded = [ "Rect", "custom_constants" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EquipedItemSlot" parent="RightEquipContainer" index="0" instance=ExtResource( 8 )]
+
+margin_right = 81.0
+margin_bottom = 81.0
+itemType = 2
+
+[node name="EquipedItemSlot2" parent="RightEquipContainer" index="1" instance=ExtResource( 8 )]
+
+margin_top = 91.0
+margin_right = 81.0
+margin_bottom = 172.0
+itemType = 7
+
+[node name="EquipedItemSlot3" parent="RightEquipContainer" index="2" instance=ExtResource( 8 )]
+
+margin_top = 182.0
+margin_right = 81.0
+margin_bottom = 263.0
+itemType = 8
+
+[node name="EquipedItemSlot4" parent="RightEquipContainer" index="3" instance=ExtResource( 8 )]
+
+margin_top = 273.0
+margin_right = 81.0
+margin_bottom = 354.0
+itemType = 9
+
+[node name="EquipedItemSlot5" parent="RightEquipContainer" index="4" instance=ExtResource( 8 )]
+
+margin_top = 364.0
+margin_right = 81.0
+margin_bottom = 445.0
+itemType = 9
+
+[node name="DescriptionPanel" type="Panel" parent="." index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 26.0
+margin_top = 860.0
+margin_right = 538.0
+margin_bottom = 1053.0
+rect_min_size = Vector2( 512, 192 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ItemName" type="RichTextLabel" parent="DescriptionPanel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 502, 38 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Margin", "Rect", "custom_fonts" ]
+
+[node name="DescriptionText" type="RichTextLabel" parent="DescriptionPanel" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 48.0
+margin_right = -10.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Margin", "custom_fonts" ]
+
+[node name="ItemStatsPopup" parent="." index="4" instance=ExtResource( 9 )]
+
+visible = false
+
+
